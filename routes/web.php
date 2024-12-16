@@ -63,11 +63,11 @@ Route::middleware('auth')->group(function ()
     Route::post('/user/edit', [UserController::class, 'updateProfile'])->name('user.profile.update');
 });
 
-Route::get('/send-test-email', function () {
-    Mail::to('shaloofarif@gmail.com')->send(new TestEmail());
-    return 'Test email sent successfully!';
-});
+// Route::get('/send-test-email', function () {
+//     Mail::to('shaloofarif@gmail.com')->send(new TestEmail());
+//     return 'Test email sent successfully!';
+// });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
